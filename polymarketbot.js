@@ -5,7 +5,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const fetch = require("node-fetch");
 
 // ================= CONFIG =================
-const TELEGRAM_BOT_TOKEN = "yourtoken";
+console.log("TOKEN EXISTS:", !!process.env.TELEGRAM_BOT_TOKEN);
 const POLYMARKET_API_BASE = "https://gamma-api.polymarket.com";
 const POLYMARKET_CLOB_API = "https://clob.polymarket.com";
 // =========================================
@@ -230,3 +230,4 @@ setInterval(() => {
 monitorPolymarket().catch(console.error);
 
 console.log("Polymarket Telegram Bot started");
+
